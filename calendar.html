@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Meeting calendar for Pataskala Lodge #404 — 1st and 3rd Tuesdays, 7:00 PM, September through June. Pataskala, Ohio." />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+  <link rel="stylesheet" href="css/inner-pages.css" />
+  <title>Meeting Calendar — Pataskala Lodge #404</title>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" role="banner" data-testid="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Pataskala Lodge 404 – Return to Home">
+        <div class="logo-icon" aria-hidden="true">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" width="52" height="52">
+            <path d="M18 60 L18 26 L52 26" stroke="var(--gold)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path d="M40 20 L26 54 M40 20 L54 54" stroke="var(--gold)" stroke-width="4" stroke-linecap="round"/>
+            <path d="M29 48 Q40 54 51 48" stroke="var(--gold)" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            <text x="40" y="44" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="15" font-weight="700" fill="var(--gold)">G</text>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">Pataskala Lodge</span>
+          <span class="logo-number">#404 &middot; Est. 1868</span>
+        </div>
+      </a>
+      <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-nav" data-testid="nav-toggle">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+      <nav id="main-nav" class="main-nav" role="navigation" aria-label="Main site navigation" data-testid="main-nav">
+        <ul role="list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="freemasonry.html" class="nav-link">What is Freemasonry?</a></li>
+          <li><a href="join.html" class="nav-link">How to Join</a></li>
+          <li><a href="officers.html" class="nav-link">Officers</a></li>
+          <li><a href="calendar.html" class="nav-link active" aria-current="page">Calendar</a></li>
+          <li><a href="history.html" class="nav-link">History</a></li>
+          <li><a href="charity.html" class="nav-link">Charity</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="contact.html" class="nav-link nav-cta">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-labelledby="page-heading">
+      <div class="container">
+        <span class="eyebrow">Meetings &amp; Events</span>
+        <h1 id="page-heading">Lodge Calendar</h1>
+        <p>All are welcome at our stated communications. Visitors must be Master Masons in good standing. Guests and prospective members may attend lodge dinners — please <a href="contact.html" style="color:var(--gold)">contact us</a> to arrange a visit.</p>
+      </div>
+    </section>
+
+    <!-- MEETING INFO BANNER -->
+    <div class="meeting-banner" role="region" aria-label="Regular meeting summary">
+      <div class="container meeting-banner-inner">
+        <div class="meeting-banner-item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <div>
+            <strong>When</strong>
+            <span>1st &amp; 3rd Tuesday · 7:00 PM</span>
+          </div>
+        </div>
+        <div class="meeting-banner-item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <div>
+            <strong>Season</strong>
+            <span>September through June</span>
+          </div>
+        </div>
+        <div class="meeting-banner-item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div>
+            <strong>Where</strong>
+            <span>116 S. Vine St., Pataskala, OH 43062</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CALENDAR SECTION -->
+    <section class="section" aria-labelledby="calendar-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow" id="calendar-month-label" aria-live="polite"></span>
+          <h2 id="calendar-heading" class="section-title">Meeting Dates</h2>
+          <p class="section-sub">Stated meetings are highlighted. Special events are noted separately below.</p>
+        </div>
+
+        <!-- Calendar navigation -->
+        <div class="calendar-nav" role="navigation" aria-label="Calendar navigation">
+          <button class="cal-nav-btn" id="prev-month" aria-label="Previous month">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <span class="cal-month-display" id="cal-month-display" aria-live="polite" aria-atomic="true"></span>
+          <button class="cal-nav-btn" id="next-month" aria-label="Next month">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+
+        <!-- Calendar grid -->
+        <div class="calendar-wrapper">
+          <div class="calendar-grid" role="grid" aria-label="Monthly calendar" id="calendar-grid">
+            <!-- Injected by calendar.js -->
+          </div>
+        </div>
+
+        <!-- Legend -->
+        <div class="cal-legend" role="list" aria-label="Calendar legend">
+          <div class="legend-item" role="listitem">
+            <span class="legend-dot legend-dot--meeting" aria-hidden="true"></span>
+            <span>Stated Meeting</span>
+          </div>
+          <div class="legend-item" role="listitem">
+            <span class="legend-dot legend-dot--special" aria-hidden="true"></span>
+            <span>Special Event</span>
+          </div>
+          <div class="legend-item" role="listitem">
+            <span class="legend-dot legend-dot--today" aria-hidden="true"></span>
+            <span>Today</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UPCOMING EVENTS LIST -->
+    <section class="section bg-off-white" aria-labelledby="events-heading">
+      <div class="container" style="max-width: 720px;">
+        <div class="section-header" style="text-align:left; margin-bottom:var(--space-lg);">
+          <span class="eyebrow">What's Coming Up</span>
+          <h2 id="events-heading" class="section-title">Upcoming Events</h2>
+        </div>
+        <ol class="events-list" id="events-list" aria-label="Upcoming lodge events">
+          <!-- Injected by calendar.js -->
+        </ol>
+        <p class="events-note">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Meeting schedules may change. Check our <a href="https://www.facebook.com/pataskala404" target="_blank" rel="noopener noreferrer">Facebook page</a> for cancellations or updates.
+        </p>
+      </div>
+    </section>
+
+    <!-- DIRECTIONS -->
+    <section class="section" aria-labelledby="directions-heading">
+      <div class="container two-col-layout">
+        <div class="prose">
+          <span class="eyebrow">Getting Here</span>
+          <h2 id="directions-heading">Directions to the Lodge</h2>
+          <p>Pataskala Lodge #404 is located in downtown Pataskala, just off the main street. Parking is available on the street and in nearby lots.</p>
+          <address>
+            <strong>116 S. Vine Street</strong><br>
+            Pataskala, Ohio 43062
+          </address>
+          <p style="margin-top:var(--space-sm);">From Columbus: Take I-70 East to Exit 112 (Pataskala). Head north on Broad Street, then turn right on Vine Street. The lodge is on the left.</p>
+          <a
+            href="https://maps.google.com/?q=116+S+Vine+Street+Pataskala+Ohio+43062"
+            class="btn btn-secondary"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="margin-top:var(--space-md);"
+            aria-label="Get directions to Pataskala Lodge 404 on Google Maps (opens in new window)"
+          >
+            Open in Google Maps &nearr;
+          </a>
+        </div>
+        <div class="map-placeholder" aria-label="Map placeholder — will be replaced with embedded map">
+          <div class="map-placeholder-inner">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <p>116 S. Vine Street<br>Pataskala, OH 43062</p>
+            <!-- Replace this div with a Google Maps embed iframe when ready:
+              <iframe
+                src="https://www.google.com/maps/embed?pb=..."
+                width="100%" height="100%" style="border:0;"
+                allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Map showing location of Pataskala Lodge 404"
+              ></iframe>
+            -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo" data-testid="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <p class="footer-lodge-name">Pataskala Lodge #404</p>
+        <p class="footer-lodge-sub">Free &amp; Accepted Masons of Ohio</p>
+        <p class="footer-tagline">Serving our community with Brotherly Love, Relief, and Truth since 1868.</p>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-heading">Quick Links</h3>
+        <nav aria-label="Footer navigation">
+          <ul role="list" class="footer-links">
+            <li><a href="freemasonry.html">What is Freemasonry?</a></li>
+            <li><a href="join.html">How to Join</a></li>
+            <li><a href="officers.html">Lodge Officers</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+            <li><a href="history.html">Our History</a></li>
+            <li><a href="charity.html">Charity</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-heading">Contact &amp; Visit</h3>
+        <address>
+          <p>116 S. Vine Street<br>Pataskala, Ohio 43062</p>
+          <p>Meetings: 1st &amp; 3rd Tuesday<br>7:00 PM (Sept–June)</p>
+        </address>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-heading">Resources</h3>
+        <ul role="list" class="footer-links">
+          <li><a href="https://www.freemason.com" target="_blank" rel="noopener noreferrer">Grand Lodge of Ohio &nearr;</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="accessibility.html">Accessibility</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; <span id="footer-year"></span> Pataskala Lodge #404 F&amp;AM. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/calendar.js"></script>
+</body>
+</html>

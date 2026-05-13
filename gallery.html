@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Photo gallery of Pataskala Lodge #404 — lodge events, degree nights, community service, and brotherhood in Pataskala, Ohio." />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+  <link rel="stylesheet" href="css/inner-pages.css" />
+  <link rel="stylesheet" href="css/history.css" />
+  <link rel="stylesheet" href="css/gallery.css" />
+  <title>Gallery — Pataskala Lodge #404</title>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" role="banner" data-testid="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Pataskala Lodge 404 – Return to Home">
+        <div class="logo-icon" aria-hidden="true">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" width="52" height="52">
+            <path d="M18 60 L18 26 L52 26" stroke="var(--gold)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path d="M40 20 L26 54 M40 20 L54 54" stroke="var(--gold)" stroke-width="4" stroke-linecap="round"/>
+            <path d="M29 48 Q40 54 51 48" stroke="var(--gold)" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            <text x="40" y="44" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="15" font-weight="700" fill="var(--gold)">G</text>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">Pataskala Lodge</span>
+          <span class="logo-number">#404 &middot; Est. 1868</span>
+        </div>
+      </a>
+      <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-nav" data-testid="nav-toggle">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+      <nav id="main-nav" class="main-nav" role="navigation" aria-label="Main site navigation" data-testid="main-nav">
+        <ul role="list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="freemasonry.html" class="nav-link">What is Freemasonry?</a></li>
+          <li><a href="join.html" class="nav-link">How to Join</a></li>
+          <li><a href="officers.html" class="nav-link">Officers</a></li>
+          <li><a href="calendar.html" class="nav-link">Calendar</a></li>
+          <li><a href="history.html" class="nav-link">History</a></li>
+          <li><a href="charity.html" class="nav-link">Charity</a></li>
+          <li><a href="gallery.html" class="nav-link active" aria-current="page">Gallery</a></li>
+          <li><a href="contact.html" class="nav-link nav-cta">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-labelledby="page-heading">
+      <div class="container">
+        <span class="eyebrow">Brotherhood in Pictures</span>
+        <h1 id="page-heading">Photo Gallery</h1>
+        <p>A look at the events, people, and moments that make Pataskala Lodge #404 what it is.</p>
+      </div>
+    </section>
+
+    <!-- FILTER TABS -->
+    <section class="section gallery-section" aria-labelledby="gallery-heading">
+      <div class="container">
+        <div class="gallery-controls" role="group" aria-label="Filter photos by category">
+          <span class="sr-only" id="gallery-heading">Photo gallery — filter and browse images</span>
+          <button class="filter-btn active" data-filter="all" aria-pressed="true" data-testid="filter-all">All Photos</button>
+          <button class="filter-btn" data-filter="events" aria-pressed="false" data-testid="filter-events">Events</button>
+          <button class="filter-btn" data-filter="degrees" aria-pressed="false" data-testid="filter-degrees">Degree Nights</button>
+          <button class="filter-btn" data-filter="charity" aria-pressed="false" data-testid="filter-charity">Charity</button>
+          <button class="filter-btn" data-filter="lodge" aria-pressed="false" data-testid="filter-lodge">The Lodge</button>
+        </div>
+
+        <!-- Photo count -->
+        <p class="gallery-count" id="gallery-count" aria-live="polite" aria-atomic="true"></p>
+
+        <!-- GALLERY GRID -->
+        <div class="gallery-grid" id="gallery-grid" role="list" aria-label="Photo gallery" data-testid="gallery-grid">
+          <!-- Injected by gallery.js — placeholder cards shown below for HTML integrity -->
+
+          <!-- Placeholder cards (will be replaced by gallery.js with real photos when added) -->
+          <article class="gallery-card" data-category="lodge" role="listitem" data-testid="gallery-card">
+            <div class="gallery-img-wrap">
+              <div class="gallery-placeholder" aria-hidden="true">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              </div>
+            </div>
+            <div class="gallery-caption">
+              <span class="gallery-caption-title">Lodge Exterior</span>
+              <span class="gallery-caption-tag">The Lodge</span>
+            </div>
+          </article>
+
+          <article class="gallery-card" data-category="events" role="listitem" data-testid="gallery-card">
+            <div class="gallery-img-wrap">
+              <div class="gallery-placeholder" aria-hidden="true">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              </div>
+            </div>
+            <div class="gallery-caption">
+              <span class="gallery-caption-title">Annual Dinner 2024</span>
+              <span class="gallery-caption-tag">Events</span>
+            </div>
+          </article>
+
+          <article class="gallery-card" data-category="degrees" role="listitem" data-testid="gallery-card">
+            <div class="gallery-img-wrap">
+              <div class="gallery-placeholder" aria-hidden="true">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              </div>
+            </div>
+            <div class="gallery-caption">
+              <span class="gallery-caption-title">Master Mason Degree Night</span>
+              <span class="gallery-caption-tag">Degree Nights</span>
+            </div>
+          </article>
+
+          <article class="gallery-card" data-category="charity" role="listitem" data-testid="gallery-card">
+            <div class="gallery-img-wrap">
+              <div class="gallery-placeholder" aria-hidden="true">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              </div>
+            </div>
+            <div class="gallery-caption">
+              <span class="gallery-caption-title">Food Drive 2024</span>
+              <span class="gallery-caption-tag">Charity</span>
+            </div>
+          </article>
+
+          <article class="gallery-card" data-category="events" role="listitem" data-testid="gallery-card">
+            <div class="gallery-img-wrap">
+              <div class="gallery-placeholder" aria-hidden="true">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              </div>
+            </div>
+            <div class="gallery-caption">
+              <span class="gallery-caption-title">Installation of Officers 2025</span>
+              <span class="gallery-caption-tag">Events</span>
+            </div>
+          </article>
+
+          <article class="gallery-card" data-category="lodge" role="listitem" data-testid="gallery-card">
+            <div class="gallery-img-wrap">
+              <div class="gallery-placeholder" aria-hidden="true">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              </div>
+            </div>
+            <div class="gallery-caption">
+              <span class="gallery-caption-title">Lodge Room Interior</span>
+              <span class="gallery-caption-tag">The Lodge</span>
+            </div>
+          </article>
+
+          <article class="gallery-card" data-category="charity" role="listitem" data-testid="gallery-card">
+            <div class="gallery-img-wrap">
+              <div class="gallery-placeholder" aria-hidden="true">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              </div>
+            </div>
+            <div class="gallery-caption">
+              <span class="gallery-caption-title">Community Service Day</span>
+              <span class="gallery-caption-tag">Charity</span>
+            </div>
+          </article>
+
+          <article class="gallery-card" data-category="degrees" role="listitem" data-testid="gallery-card">
+            <div class="gallery-img-wrap">
+              <div class="gallery-placeholder" aria-hidden="true">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              </div>
+            </div>
+            <div class="gallery-caption">
+              <span class="gallery-caption-title">Entered Apprentice Degree</span>
+              <span class="gallery-caption-tag">Degree Nights</span>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Upload instructions for lodge members -->
+        <div class="gallery-upload-note update-note" role="note" aria-label="Instructions for lodge members">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <p><strong>Lodge members:</strong> To add real photos, place image files in an <code>images/gallery/</code> folder and update the <code>GALLERY_PHOTOS</code> array in <code>js/gallery.js</code>. See the README for step-by-step instructions.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" aria-hidden="true" data-testid="lightbox">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Close photo viewer">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous photo">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="lightbox-content">
+        <img id="lightbox-img" src="" alt="" class="lightbox-image" />
+        <p id="lightbox-caption" class="lightbox-caption"></p>
+      </div>
+      <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next photo">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+    <div class="lightbox-backdrop" id="lightbox-backdrop" aria-hidden="true"></div>
+
+    <!-- SHARE PHOTOS CTA -->
+    <section class="inner-cta section bg-off-white" aria-labelledby="share-heading">
+      <div class="container inner-cta-inner">
+        <div>
+          <h2 id="share-heading">Have Photos to Share?</h2>
+          <p>If you have photos from lodge events, degree nights, or community activities, we'd love to include them here. Send them to the lodge Secretary or post them on our Facebook page.</p>
+        </div>
+        <div class="inner-cta-btns">
+          <a href="https://www.facebook.com/pataskala404" class="btn btn-facebook" target="_blank" rel="noopener noreferrer" aria-label="Visit Pataskala Lodge 404 on Facebook (opens in new window)">
+            <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" focusable="false"><path d="M24 12.073C24 5.404 18.627 0 12 0S0 5.404 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.887v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+            Share on Facebook
+          </a>
+          <a href="contact.html" class="btn btn-secondary">Contact the Secretary</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo" data-testid="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <p class="footer-lodge-name">Pataskala Lodge #404</p>
+        <p class="footer-lodge-sub">Free &amp; Accepted Masons of Ohio</p>
+        <p class="footer-tagline">Serving our community with Brotherly Love, Relief, and Truth since 1868.</p>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-heading">Quick Links</h3>
+        <nav aria-label="Footer navigation">
+          <ul role="list" class="footer-links">
+            <li><a href="freemasonry.html">What is Freemasonry?</a></li>
+            <li><a href="join.html">How to Join</a></li>
+            <li><a href="officers.html">Lodge Officers</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+            <li><a href="history.html">Our History</a></li>
+            <li><a href="charity.html">Charity</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-heading">Contact &amp; Visit</h3>
+        <address>
+          <p>116 S. Vine Street<br>Pataskala, Ohio 43062</p>
+          <p>Meetings: 1st &amp; 3rd Tuesday<br>7:00 PM (Sept–June)</p>
+        </address>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-heading">Resources</h3>
+        <ul role="list" class="footer-links">
+          <li><a href="https://www.freemason.com" target="_blank" rel="noopener noreferrer">Grand Lodge of Ohio &nearr;</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="accessibility.html">Accessibility</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; <span id="footer-year"></span> Pataskala Lodge #404 F&amp;AM. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>

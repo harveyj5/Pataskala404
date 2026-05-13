@@ -1,0 +1,289 @@
+/* =========================================================
+   CONTACT PAGE + SHARED PAGE STYLES
+   ========================================================= */
+
+/* ---- VISUALLY HIDDEN (Accessibility utility) ---- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---- REVEAL ANIMATION (added via JS) ---- */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---- HEADER SCROLLED STATE ---- */
+.site-header.is-scrolled {
+  box-shadow: 0 2px 24px rgba(12,31,61,0.14);
+}
+
+/* =========================================================
+   SHARED PAGE HERO (used on inner pages)
+   ========================================================= */
+.page-hero {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+  padding: var(--space-2xl) 0 var(--space-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      rgba(201,151,58,0.05) 0px, rgba(201,151,58,0.05) 1px,
+      transparent 1px, transparent 40px
+    );
+  pointer-events: none;
+}
+
+.page-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.page-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: var(--space-sm);
+}
+
+.page-hero p {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.78);
+  max-width: 560px;
+}
+
+/* =========================================================
+   CONTACT PAGE
+   ========================================================= */
+
+/* Grid layout */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 340px 1fr;
+  }
+}
+
+/* Info cards */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.contact-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  background: var(--off-white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  transition: box-shadow var(--transition);
+}
+
+.contact-card:hover {
+  box-shadow: 0 4px 20px rgba(12,31,61,0.08);
+}
+
+.contact-card-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gold-light);
+  border-radius: 10px;
+}
+
+.contact-card h3 {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-bottom: 0.35rem;
+}
+
+.contact-card address,
+.contact-card p,
+.contact-card a {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  font-style: normal;
+  line-height: 1.7;
+}
+
+.contact-card a {
+  color: var(--blue);
+}
+
+.contact-card a:hover {
+  color: var(--navy);
+}
+
+/* Form wrapper */
+.contact-form-wrapper {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  box-shadow: 0 2px 20px rgba(12,31,61,0.06);
+}
+
+.form-heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 0.35rem;
+}
+
+.form-sub {
+  font-size: 0.88rem;
+  color: var(--gray-400);
+  margin-bottom: var(--space-lg);
+}
+
+/* Form layout */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm);
+}
+
+@media (max-width: 500px) {
+  .form-row { grid-template-columns: 1fr; }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: var(--space-md);
+}
+
+.form-label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--gray-800);
+  letter-spacing: 0.01em;
+}
+
+.required-star {
+  color: #c0392b;
+  margin-left: 2px;
+}
+
+.form-input {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text);
+  background: var(--white);
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 0.65rem 0.9rem;
+  width: 100%;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(37,99,168,0.15);
+}
+
+.form-input.is-invalid {
+  border-color: #c0392b;
+  box-shadow: 0 0 0 3px rgba(192,57,43,0.12);
+}
+
+.form-input.is-valid {
+  border-color: #27ae60;
+}
+
+.form-select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%239aa3b4' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.9rem center;
+  padding-right: 2.5rem;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+/* Error states */
+.form-error {
+  font-size: 0.82rem;
+  color: #c0392b;
+  min-height: 1.2em;
+  display: block;
+}
+
+/* Form status message */
+.form-status {
+  margin-bottom: var(--space-sm);
+  padding: 0;
+  font-size: 0.95rem;
+  border-radius: var(--radius);
+  transition: all var(--transition);
+}
+
+.form-status.is-success {
+  padding: var(--space-sm) var(--space-md);
+  background: #eafaf1;
+  border: 1px solid #27ae60;
+  color: #1a6b40;
+}
+
+.form-status.is-error {
+  padding: var(--space-sm) var(--space-md);
+  background: #fdf0ee;
+  border: 1px solid #c0392b;
+  color: #7b241c;
+}
+
+/* Honeypot — hidden from humans, visible to bots */
+.form-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

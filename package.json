@@ -1,0 +1,17 @@
+{
+  "name": "pataskala-lodge-404",
+  "version": "1.0.0",
+  "description": "Pataskala Lodge #404 — Free & Accepted Masons of Ohio website",
+  "private": true,
+  "scripts": {
+    "test": "jest --verbose",
+    "test:watch": "jest --watch"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": ["**/tests/**/*.test.js"]
+  }
+}
