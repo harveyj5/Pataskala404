@@ -38,7 +38,7 @@ Copy an existing `<article>` block and paste it at the top of the news list.
 
 ## 🧪 Running Tests
 
-Requires Node.js installed on your computer.
+Requires Node.js and Python 3.12 installed on your computer.
 
 ```bash
 cd pataskala404
@@ -46,7 +46,15 @@ npm install
 npm test
 ```
 
-All 33 tests should say ✓ PASS.
+For a single end-to-end validation command that also checks the Python pipeline code:
+
+```bash
+npm run validate
+```
+
+This runs the Jest suite and compiles the Python sources in `src/core`.
+
+All tests should say ✓ PASS.
 
 ---
 

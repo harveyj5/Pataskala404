@@ -1,0 +1,63 @@
+teams:
+  - id: "00_pre_flight_alignment"
+    name: "Pre-Flight Alignment"
+    model: "gemini_reasoning"
+    folder: "review_pipeline/00_pre_flight_alignment"
+    artifacts: ["Technical_Intake.md"]
+    triggers: ["New Idea", "New Project", "New Product"]
+
+  - id: "01_discovery"
+    name: "Discovery Team"
+    model: "gemini_reasoning"
+    folder: "review_pipeline/01_discovery"
+    artifacts: ["PRD.md", "Business_Viability_Metrics.md"]
+    triggers: ["New Idea", "New Project", "New Product", "Review Existing"]
+
+  - id: "02_antagonist"
+    name: "Antagonist Team"
+    model: "gemini_reasoning"
+    folder: "review_pipeline/02_antagonist"
+    artifacts: ["Audit_Report.md"]
+    triggers: ["Output from 01_discovery"]
+
+  - id: "03_architecture"
+    name: "Architecture Team"
+    model: "gemini_reasoning"
+    folder: "review_pipeline/03_architecture"
+    artifacts: ["System_Design.md", "Schema_Blueprints.md"]
+    triggers: ["Passed 02_antagonist"]
+
+  - id: "04_software_engineering"
+    name: "Software Engineering Team"
+    model: "claude_engineering"
+    folder: "review_pipeline/04_software_engineering"
+    artifacts: ["app.py", "models.py"]
+    triggers: ["Passed 03_architecture"]
+
+  - id: "05_security"
+    name: "Cybersecurity Team"
+    model: "claude_engineering"
+    folder: "review_pipeline/05_security"
+    artifacts: ["Threat_Model.md", "SAST_DAST_Audit.md", "Dependency_Vulnerability_Matrix.md"]
+    triggers: ["Output from 04_software_engineering"]
+
+  - id: "06_ux_ui"
+    name: "UX/UI Team"
+    model: "gemini_reasoning"
+    folder: "review_pipeline/06_ux_ui"
+    artifacts: ["UI_Layouts.md", "Accessibility_Audit.md"]
+    triggers: ["Passed 05_security"]
+
+  - id: "07_qa"
+    name: "QA & Testing Team"
+    model: "claude_engineering"
+    folder: "review_pipeline/07_qa"
+    artifacts: ["Automated_Tests.py", "features/acceptance.feature", "Test_Execution_Log.md"]
+    triggers: ["Passed 06_ux_ui"]
+
+  - id: "08_reporting"
+    name: "Reporting & Impact Team"
+    model: "gemini_fast"
+    folder: "review_pipeline/08_reporting"
+    artifacts: ["Human_Impact_Scorecard.md"]
+    triggers: ["Passed 07_qa"]

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>S6 Agent Pipeline - Kanban Board</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0f172a; color: #f8fafc; margin: 0; padding: 20px; }
+        h1 { text-align: center; color: #38bdf8; }
+        .last-update { text-align: center; color: #94a3b8; font-size: 0.9em; margin-bottom: 20px; }
+        .board { display: flex; gap: 15px; overflow-x: auto; padding-bottom: 10px; }
+        .column { background: #1e293b; border-radius: 8px; width: 280px; min-width: 280px; padding: 15px; box-sizing: border-box; }
+        .column h3 { margin-top: 0; color: #f1f5f9; border-bottom: 2px solid #334155; padding-bottom: 8px; }
+        .card { background: #334155; border-radius: 6px; padding: 12px; margin-bottom: 10px; border-left: 4px solid #38bdf8; }
+        .card h4 { margin: 0 0 6px 0; color: #ffffff; }
+        .card p { margin: 0; font-size: 0.85em; color: #cbd5e1; }
+        .card .time { font-size: 0.75em; color: #94a3b8; margin-top: 8px; text-align: right; }
+    </style>
+</head>
+<body>
+
+    <h1>S6 Framework Pipeline Kanban</h1>
+    <div class="last-update" id="lastUpdated">Loading updates...</div>
+
+    <div class="board" id="kanbanBoard"></div>
+
+    <script>
+        async function fetchKanbanData() {
+            try {
+                const response = await fetch('kanban_data.json');
+                const data = await response.json();
+                
+                document.getElementById('lastUpdated').innerText = 'Last Updated: ' + new Date(data.last_updated).toLocaleString();
+                
+                const boardDiv = document.getElementById('kanbanBoard');
+                boardDiv.innerHTML = '';
+
+                for (const [colName, cards] of Object.entries(data.columns)) {
+                    const colDiv = document.createElement('div');
+                    colDiv.className = 'column';
+                    
+                    let cardsHtml = cards.map(card => `
+                        <div class="card">
+                            <h4>${card.title}</h4>
+                            <p>${card.details}</p>
+                            <div class="time">${card.updated_at}</div>
+                        </div>
+                    `).join('');
+
+                    colDiv.innerHTML = `<h3>${colName} (${cards.length})</h3>${cardsHtml}`;
+                    boardDiv.appendChild(colDiv);
+                }
+            } catch (err) {
+                console.error("Error loading Kanban data:", err);
+            }
+        }
+
+        fetchKanbanData();
+        setInterval(fetchKanbanData, 3000); // Auto refresh every 3 seconds
+    </script>
+</body>
+</html>

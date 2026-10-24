@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "test": "jest --verbose",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "validate": "validate.bat"
   },
   "devDependencies": {
     "jest": "^29.0.0"
